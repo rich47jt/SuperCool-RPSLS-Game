@@ -10,6 +10,11 @@ namespace Project_RPSLS_Game
     {
         static void Main(string[] args)
         {
+            Game_Room gameon = new Game_Room();
+
+            Console.ReadLine();
+
+            
         }
     }
 }

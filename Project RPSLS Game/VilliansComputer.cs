@@ -20,17 +20,13 @@ namespace Project_RPSLS_Game
         }
 
         //methods
-        public override void CharacterCall()
-        {
-           
-            Console.WriteLine("Your going down loser!",name);
-            
-        }
+       
 
         public override void PlayerChoice()
         { 
-            int rng = random.Next(5);
+            int rng = random.Next(4);
             choice = gestures[rng];
+            Console.WriteLine("computer has selected" + choice);
             
         }
         

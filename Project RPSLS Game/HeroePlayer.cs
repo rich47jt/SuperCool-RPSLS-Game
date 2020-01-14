@@ -18,13 +18,11 @@ namespace Project_RPSLS_Game
         }
 
         //methods
-        public override void CharacterCall()
-        {
-            Console.WriteLine("Lets have a fair game!", name);
-        }
+
+        
         public override void PlayerChoice()
         {
-           
+           ///find a way to have program distinguise btwn player 1&2
             Console.WriteLine("Please enter a gesture");
             string userInput = Console.ReadLine();
 
@@ -35,24 +33,24 @@ namespace Project_RPSLS_Game
                     choice = gestures[0];
                     break;
                 case "paper":
-                    Console.WriteLine("My choice is Paper" + gestures[1]);
+                    Console.WriteLine("My choice is" + gestures[1]);
                     choice = gestures[1];
                     break;
-                case "sissors":
-                    Console.WriteLine("My choice is scissors" + gestures[2]);
+                case "scissors":
+                    Console.WriteLine("My choice is"+ gestures[2]);
                     choice = gestures[2];
                     break;
                 case "lizard":
-                    Console.WriteLine("My choice is lizard" + gestures[3]);
+                    Console.WriteLine("My choice is" + gestures[3]);
                     choice = gestures[3];
                     break;
                 case "spok":
-                    Console.WriteLine("My choice is spok" + gestures[4]);
+                    Console.WriteLine("My choice is " + gestures[4]);
                     choice = gestures[4];
                     break;
 
                 default:
-                    Console.WriteLine("Play by the rules and make an appropriate gesture");
+                    Console.WriteLine("Play by the rules and make an appropriate gesture!");
                     PlayerChoice();
                     break;
             } 

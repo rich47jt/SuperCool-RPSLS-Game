@@ -17,6 +17,7 @@ namespace Project_RPSLS_Game
         public Game_Room()
         {
             
+            
             ChooseGameMode();
             Play();
 
@@ -72,7 +73,7 @@ namespace Project_RPSLS_Game
                 }
                 else if (playerOne.choice == "rock" && playerTwo.choice == "scissors")
                 {
-                    Console.WriteLine("player one has won the game");
+                    Console.WriteLine("player one has won");
                     playerOne.score += 1;
                 }
                 else if (playerOne.choice == "rock" && playerTwo.choice == "lizard")
@@ -109,6 +110,7 @@ namespace Project_RPSLS_Game
                     Console.WriteLine("player one has won");
                     playerOne.score += 1;
                 }
+
                 //break
                 else if (playerOne.choice == "scissors" && playerTwo.choice == "paper")
                 {
@@ -128,9 +130,10 @@ namespace Project_RPSLS_Game
                 }
                 else if (playerOne.choice == "scissors" && playerTwo.choice == "spok")
                 {
-                    Console.WriteLine("player two has one");
+                    Console.WriteLine("player two has won");
                     playerTwo.score += 1;
                 }
+
                 //break
                 else if (playerOne.choice == "lizard" && playerTwo.choice == "scissors")
                 {
@@ -154,6 +157,7 @@ namespace Project_RPSLS_Game
                     playerOne.score += 1;
 
                 }
+
                 //break
                 else if (playerOne.choice == "spok" && playerTwo.choice == "scissors")
                 {
@@ -182,16 +186,17 @@ namespace Project_RPSLS_Game
 
             }
 
-
+            ///always prints out player two has won? gotta fix it
             if (playerOne.score > 2)
             {
-                Console.WriteLine("player one on has won game");
+                Console.WriteLine("player one on has won round");
             }
-            else
+           else 
             {
-                Console.WriteLine("player two has lost this round");
+                Console.WriteLine("player two has won  round");
             }
 
+            
         }
 
        

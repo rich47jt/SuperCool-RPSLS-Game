@@ -10,12 +10,13 @@ namespace Project_RPSLS_Game
     {
         //variables 
         Random random;
-
+       
         public VilliansComputer(string name)
         {
 
             this.name = name;
             random = new Random();
+            
         }
 
         //methods

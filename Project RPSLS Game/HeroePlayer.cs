@@ -9,23 +9,18 @@ namespace Project_RPSLS_Game
    class HeroePlayer: Player
     {
         //varibles
-
-
-
-
+        
         //constructor
         public HeroePlayer(string name)
         {
 
             this.name = name;
-            
         }
 
         //methods
-
         public override void CharacterCall()
         {
-          Console.WriteLine("Lets have a fair fight!",name);
+            Console.WriteLine("Lets have a fair game!", name);
         }
         public override void PlayerChoice()
         {
@@ -60,7 +55,7 @@ namespace Project_RPSLS_Game
                     Console.WriteLine("Play by the rules and make an appropriate gesture");
                     PlayerChoice();
                     break;
-            }
+            } 
         }
     }
     

@@ -16,10 +16,18 @@ namespace Project_RPSLS_Game
         //constuctor
         public Game_Room()
         {
-            
-            
+
+            Start();
+
+
+        }
+
+        //create start -ints 2 other func
+        public void Start()
+        {
             ChooseGameMode();
             Play();
+            Restart();
 
         }
 
@@ -53,7 +61,7 @@ namespace Project_RPSLS_Game
 
         public void Play()
         {
-            while(playerOne.score < 2 && playerTwo.score < 2)
+            while(playerOne.score < 3 && playerTwo.score < 3)
             {
 
                 playerOne.PlayerChoice();
@@ -186,17 +194,41 @@ namespace Project_RPSLS_Game
 
             }
 
-            ///always prints out player two has won? gotta fix it
             if (playerOne.score > 2)
             {
                 Console.WriteLine("player one on has won round");
             }
-           else 
-            {
-                Console.WriteLine("player two has won  round");
-            }
 
+           if(playerTwo.score > 2)
+           {
+                Console.WriteLine("player two has won  round");
+           }
+
+           
             
+        }
+
+        public void Restart()
+        {
+            Console.WriteLine("wanna play again Yes or No");
+            string Userinput = Console.ReadLine();
+
+            switch (Userinput)
+            {
+                case "Yes":
+                    Console.WriteLine("Lets go");
+                    Start();
+                    break;
+
+                case "No":
+                    Console.WriteLine("See you Later");
+                    break;
+
+                default:
+                    Console.WriteLine("incorrect input, YOU WANNA PLAY OR NOT!");
+                    Restart();
+                    break;
+            }
         }
 
        

@@ -10,8 +10,7 @@ namespace Project_RPSLS_Game
     {
         //varables
       public  List <string> gestures;
-      public string name;  //keep name of get rid of it ?
-        
+      public string name;  
       public string choice;
       public int score;
 

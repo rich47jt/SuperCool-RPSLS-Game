@@ -11,29 +11,23 @@ namespace Project_RPSLS_Game
         Player playerOne;
         Player playerTwo;
        
-
-
-        //constuctor
         public Game_Room()
         {
-
             Start();
-
 
         }
 
-        //create start -ints 2 other func
         public void Start()
         {
             ChooseGameMode();
             Play();
             Restart();
-
         }
 
         public void ChooseGameMode()
         {
-            Console.WriteLine("please pick your game mode pvp or pvcomp");
+            Console.WriteLine("Welcome to the game rock, paper, scissors, lizard, spock");
+            Console.WriteLine("Please pick your game mode pvp or pvcomp:");
             string gamemode = Console.ReadLine();
          
             switch (gamemode)
@@ -41,14 +35,14 @@ namespace Project_RPSLS_Game
 
                 case "pvp":
                     Console.WriteLine("you have choosen player vs player");
-                    playerOne = new HeroePlayer("playerone");
-                    playerTwo = new HeroePlayer("playerTwo");
+                    playerOne = new HeroePlayer("player one");
+                    playerTwo = new HeroePlayer("player Two");
                     break;
                
                 case "pvcomp":
                     Console.WriteLine("you have choosen player vs computer");
-                    playerOne = new HeroePlayer("playerone");
-                    playerTwo = new VilliansComputer("playertwo");
+                    playerOne = new HeroePlayer("player one");
+                    playerTwo = new VilliansComputer("player two");
                     break;
 
                 default:
@@ -73,7 +67,7 @@ namespace Project_RPSLS_Game
                     Console.WriteLine("both players have tied this round"); 
                 }
 
-                //start
+                
                 else if (playerOne.choice == "rock" && playerTwo.choice == "paper")
                 {
                     Console.WriteLine("player two has won");
@@ -90,13 +84,13 @@ namespace Project_RPSLS_Game
                     playerOne.score += 1;
                         
                 }
-                else if (playerOne.choice == "rock" && playerTwo.choice == "spok")
+                else if (playerOne.choice == "rock" && playerTwo.choice == "spock")
                 {
                     Console.WriteLine("player two has won");
                     playerTwo.score += 1;
                 }
 
-                //break
+                
                 else if (playerOne.choice == "paper" && playerTwo.choice == "scissors")
                 {
                     Console.WriteLine("player two has won");
@@ -113,13 +107,13 @@ namespace Project_RPSLS_Game
                     playerTwo.score += 1;
 
                 }
-                else if (playerOne.choice == "paper" && playerTwo.choice == "spok")
+                else if (playerOne.choice == "paper" && playerTwo.choice == "spock")
                 {
                     Console.WriteLine("player one has won");
                     playerOne.score += 1;
                 }
 
-                //break
+                
                 else if (playerOne.choice == "scissors" && playerTwo.choice == "paper")
                 {
                     Console.WriteLine("player one has won");
@@ -136,13 +130,13 @@ namespace Project_RPSLS_Game
                     playerOne.score += 1;
 
                 }
-                else if (playerOne.choice == "scissors" && playerTwo.choice == "spok")
+                else if (playerOne.choice == "scissors" && playerTwo.choice == "spock")
                 {
                     Console.WriteLine("player two has won");
                     playerTwo.score += 1;
                 }
 
-                //break
+                
                 else if (playerOne.choice == "lizard" && playerTwo.choice == "scissors")
                 {
                     Console.WriteLine("player two has won");
@@ -159,42 +153,42 @@ namespace Project_RPSLS_Game
                     playerOne.score += 1;
 
                 }
-                else if (playerOne.choice == "lizard" && playerTwo.choice == "spok")
+                else if (playerOne.choice == "lizard" && playerTwo.choice == "spock")
                 {
                     Console.WriteLine("player one has won");
                     playerOne.score += 1;
 
                 }
 
-                //break
-                else if (playerOne.choice == "spok" && playerTwo.choice == "scissors")
+                
+                else if (playerOne.choice == "spock" && playerTwo.choice == "scissors")
                 {
                     Console.WriteLine("player one has won");
                     playerOne.score += 1;
                 }
-                else if (playerOne.choice == "spok" && playerTwo.choice == "rock")
+                else if (playerOne.choice == "spock" && playerTwo.choice == "rock")
                 {
                     Console.WriteLine("player one has won");
                     playerOne.score += 1;
                 }
-                else if (playerOne.choice == "spok" && playerTwo.choice == "paper")
+                else if (playerOne.choice == "spock" && playerTwo.choice == "paper")
                 {
                     Console.WriteLine("player Two has won");
                     playerTwo.score += 1;
 
                 }
-                else if (playerOne.choice == "spok" && playerTwo.choice == "lizard")
+                else if (playerOne.choice == "spock" && playerTwo.choice == "lizard")
                 {
                     Console.WriteLine("player two has won");
                     playerTwo.score += 1;
 
                 }
-                //end
+                
 
 
             }
 
-            if (playerOne.score > 2)
+           if (playerOne.score > 2)
             {
                 Console.WriteLine("player one on has won round");
             }
@@ -204,8 +198,6 @@ namespace Project_RPSLS_Game
                 Console.WriteLine("player two has won  round");
            }
 
-           
-            
         }
 
         public void Restart()

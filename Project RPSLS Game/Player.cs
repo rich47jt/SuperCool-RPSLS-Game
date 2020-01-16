@@ -10,7 +10,7 @@ namespace Project_RPSLS_Game
     {
         //varables
       public  List <string> gestures;
-      public string name;  
+      public string name;
       public string choice;
       public int score;
 
@@ -21,14 +21,11 @@ namespace Project_RPSLS_Game
         {
             gestures = new List<string>() { "rock", "paper","scissors","lizard","spok" };
             score = 0;
+         
         }
 
         //methods
-      
-
-       
-
-
+     
         public abstract void PlayerChoice();
 
 

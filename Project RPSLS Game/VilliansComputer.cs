@@ -19,9 +19,6 @@ namespace Project_RPSLS_Game
             
         }
 
-        //methods
-       
-
         public override void PlayerChoice()
         { 
             int rng = random.Next(4);

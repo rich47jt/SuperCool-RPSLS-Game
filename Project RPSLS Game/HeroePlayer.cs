@@ -8,22 +8,17 @@ namespace Project_RPSLS_Game
 {
    class HeroePlayer: Player
     {
-        //varibles
-        
-
-
-        //constructor
+   
         public HeroePlayer(string name)
         {
-
+            
             this.name = name;
         }
 
-        //methods
         public override void PlayerChoice()
         {
-           ///find a way to have program distinguise btwn player 1&2
-            Console.WriteLine("Please enter a gesture");
+           
+            Console.WriteLine("Please enter a gesture:");
             string userInput = Console.ReadLine();
 
             switch(userInput)
@@ -32,7 +27,6 @@ namespace Project_RPSLS_Game
                     Console.WriteLine("My Choice  "  +  gestures[0]);
                     choice = gestures[0];
                     break;
-
                 case "paper":
 
                     Console.WriteLine("My choice  "  +  gestures[1]);
@@ -49,7 +43,7 @@ namespace Project_RPSLS_Game
                     choice = gestures[3];
                     break;
 
-                case "spok":
+                case "spock":
                     Console.WriteLine("My choice  "  +  gestures[4]);
                     choice = gestures[4];
                     break;
